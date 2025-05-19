@@ -4,6 +4,7 @@ A Port of [Vencords](https://github.com/Vendicated/Vencord) [Youtube Adblocker](
 
 This is 1-1 Port as of May 19 2025.
 
+This plugin requires this [replugged#656](https://github.com/replugged-org/replugged/pull/656) to be merged
 
 Direct Download Link: 
 [![dev.yofukashino.YoutubeAdblock.asar](https://img.shields.io/github/downloads/yofukashino/YoutubeAdblock/total.svg?style=social&label=Direct%20Download)](https://GitHub.com/yofukashino/YoutubeAdblock/releases/)
