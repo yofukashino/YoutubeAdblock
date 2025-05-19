@@ -1,0 +1,20 @@
+{
+  "id": "dev.yofukashino.YoutubeAdblock",
+  "name": "YoutubeAdblock",
+  "description": "Block Ads on youtube in discord",
+  "author": {
+    "discordID": "1121961711080050780",
+    "name": "Nanakusa",
+    "github": "yofukashino"
+  },
+  "version": "1.0.0",
+  "updater": {
+    "id": "yofukashino/YoutubeAdblock",
+    "type": "github"
+  },
+  "license": "GPLv3",
+  "type": "replugged-plugin",
+  "native": "src/native.ts",
+  "reloadRequired": true,
+  "source": "https://github.com/yofukashino/YoutubeAdblock"
+}
