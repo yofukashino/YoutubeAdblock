@@ -11,12 +11,12 @@ import adguard from "./adguard.js?string";
 
 const addFrameListener = (win: BrowserWindow): void => {
   win.webContents.on("frame-created", (_, { frame }) => {
-    frame?.once("dom-ready", () => {
+    frame?.once("dom-ready", async () => {
       if (
         frame.url.includes("youtube.com/embed/") ||
         (frame.url.includes("discordsays") && frame.url.includes("youtube.com"))
       ) {
-        void frame.executeJavaScript(adguard);
+        await frame.executeJavaScript(adguard);
       }
     });
   });
