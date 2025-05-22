@@ -6,10 +6,10 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { app } from "electron";
+import { BrowserWindow, app } from "electron";
 import adguard from "./adguard.js?string";
 
-app.on("browser-window-created", (_, win) => {
+const addFrameListener = (win: BrowserWindow): void => {
   win.webContents.on("frame-created", (_, { frame }) => {
     frame?.once("dom-ready", () => {
       if (
@@ -20,4 +20,8 @@ app.on("browser-window-created", (_, win) => {
       }
     });
   });
-});
+};
+
+BrowserWindow.getAllWindows().forEach(addFrameListener);
+
+app.on("browser-window-created", (_, win) => addFrameListener(win));

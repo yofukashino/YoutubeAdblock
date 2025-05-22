@@ -15,7 +15,7 @@ const inlineTextPlugin = {
     build.onLoad({ filter: /.*/, namespace: 'inline-text' }, (args) => {
       const contents = readFileSync(args.path, 'utf8');
       return {
-        contents: `export default ${JSON.stringify(contents)};`,
+        contents: `export default ${JSON.stringify(contents.trim().replaceAll("\n", ""))};`,
         loader: 'js',
       };
     });
